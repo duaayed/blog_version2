@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+ 
+
+ .THE-BLOG{
+    text-align: center;
+    padding: 0;
+    font-size: 120px;
+    font-weight: bold;   
+ }
+ 
+.blog-title
+.blog hr{
+    margin: 3% 0px;
+ }
+ .blog-content p{
+    color: gray;
+ }
+.blog{
+    margin: 8%;
+    margin-top: 3%;
+}
+.heading-and-arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 16px;
+    position: relative;
+    align-self: stretch;
+    flex-shrink: 0;
+}
+a .arrow-up-right{
+    /* position: relative; */
+    right: 0px;
+}
+a:hover svg #Icon {
+     stroke: #6941c6;
+}
+
+
+/* Badges in Blog  */
+.blog-badges{
+    display: inline-flex;
+    box-sizing: border-box;
+    gap: 0.5rem;
+    
+}
+.blog-badge-1,.blog-badge-2,.blog-badge-3{
+    box-sizing: border-box;
+    text-align: center;   
+    text-align: center;
+    font-family: var(--text-sm-medium-font-family, 'Inter-Medium', sans-serif);
+    font-size: var(--text-sm-medium-font-size, 14px);
+    line-height: var(--text-sm-medium-line-height, 20px);
+    font-weight: var(--text-sm-medium-font-weight, 500);
+    position: relative;
+    border-radius: 16px;
+    padding: 2px 10px 2px 10px;
+}
+.blog-badge-1{
+    color: #6941c6;
+    background: #f9f5ff;
+}
+.blog-badge-2{
+    color: #3538cd;
+    background: #eef4ff;
+}
+.blog-badge-3{
+    color: #c11574;
+    background: #fdf2fa;
+}
+
+
+
+.blog-content> h3{
+    margin-top: 0;
+    color: #6941c6;
+text-align: left;
+font-family: var(--text-sm-semibold-font-family, 'Inter-SemiBold', sans-serif);
+font-size: var(--text-sm-semibold-font-size, 20px); 
+line-height: var(--text-sm-semibold-line-height, 20px);
+font-weight: var(--text-sm-semibold-font-weight, 600);
+}
+.blog-content h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.blog-top-right h2{
+    font-size: 1.2rem;
+ }
+ .blog-top-right h3 {
+    font-size: 1rem;
+ }
+.blog-content{
+    margin-bottom: 10%;
+}
+img{
+    width: 100%;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+/* .img-1{
+    width: 100%;
+} */
+@media (min-width:1025px) {
+  .img-1,.img-2{
+    width: 572px;
+    height: 208px;
+  }
+  .blog-top-right img{
+    width: 300px;
+    height: 180px;
+  }
+  /* for fixing Ipad size  */
+  .blog-top-right .blog-content {
+    margin-left: 8% !important;
+}
+  /* .blog-top-right{
+    margin-bottom: 2rem !important;
+  }
+  */
+  
+}
+
+@media (max-width:1024px) {
+.blog-content h2{
+    font-size: 1.2rem;
+ }
+ .blog-top-right .blog-content{
+     margin-left: 0% !important; 
+} 
+.THE-BLOG{
+    font-size: 4rem;
+}
+
+.blog-content h3{
+    font-size: 1rem;
+}
+/* a#hidden-arrow{
+    visibility: hidden;
+ } */
+
+}
+@media (min-width: 340px) and (max-width: 430px){
+    .THE-BLOG {
+        font-size: 3rem;
+    }
+  }
+/* @media(width:1366px){
+.img-1,.img-2{
+width: 572px;
+}
+.blog-top-right img{
+    width: 300px;
+}
+} */
+ *{
+    box-sizing: border-box;
+}
+.blog-top-right .blog-content{
+    margin-left: 5%;
+} 
+
+
+/* nav  */
+.nav-link{
+  position: relative;
+}
+.nav-link::before{
+  content: "";
+  position: absolute;
+  background:  rgb(0, 0, 0);
+  width:100%;
+  height: 3px;
+  bottom: -20px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.nav-link:hover::before{
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}
+/* .navbar-dark .navbar-nav .nav-link:hover {
+ color: rgb(0, 0, 0); 
+}  */
+.nav-item {
+  padding: 0 19px;
+}
+
+
+.fa-bars:before {
+  font-size: 28px;
+}
+
+
+@media (min-width: 820px) {
+ 
+  .nav-link {
+    position: relative;
+    /* transition: 0.3s ; */
+  }
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 3px;
+    bottom: -20px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+
+  .nav-link:hover::before {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(0, 0, 0);
+  }
+}
+
+@media (min-width: 912px) and (max-width: 912px) {
+  .nav-link:hover::before {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.navbar>.container-fluid {
+  padding-left: 10%;
+  padding-right: 5%;
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.show {
+  color: rgb(0, 0, 0) !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+/* 
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+} */
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar button {
+  border: none;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.navbar-brand .letter::first-letter {
+  font-size: 4rem;
+}
+/* end nav  */
+</style>
+</head>
+<body>
+
+    <header class="speical-header">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid justify-content-between">
+                <a class="navbar-brand letter ms-sm-3  " href="./index.html">WAVES</a>
+
+
+                <button class="navbar-toggler me-sm-0 me-md-5 me-lg-5 bg-transparent" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars" style="color: #000000;"></i>
+                </button>
+
+
+                <div class="collapse navbar-collapse me-sm-1 me-md-5" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./#team-section">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./#activities">Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sub-footer">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="blog">
+        <hr>
+        <h1 class="THE-BLOG">THE BLOG</h1>
+       <hr>
+       <h2 class="blog-title mb-3">Recent blog posts</h2>
+    
+        <div class="container-blog">
+        
+        <section class="blog-section">
+            <div class="row">
+                <div class="col-xl-6 col-sm-12 col-md-12 blog-top-left">
+                    <!-- Top left -->
+                   
+                    <div class="row">
+                        <div class="col-sm-12 col-xl-12 col-md-12">
+                           <a href=""> 
+                                <img class="image img-1"  src="titan_side.png" alt="" >
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-content">
+                                <h3>• 21 Sep 2024 </h3>
+                               
+                                 <div class="heading-and-arrow">
+                                 <h2>OceanGate's Titan Submersible: A Cautionary Tale of Technology</h2>
+                                   <a  href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <g class="arrow-up-right">
+                                                   <path id="Icon" d="M7 17L17 7M17 7H7M17 7V17" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                   </g>
+                                       </svg>
+                                </a>
+                                   </div>
+                                   <p>OceanGate's Titan sub used outdated navigation, raising safety concerns. Antonella Wilby criticized it and was removed after reporting an explosion.</p>
+                                   <div class="blog-badges">
+                                       <div class="blog-badge-1">Design</div>
+                                       <div class="blog-badge-2">Research</div>
+                                       <div class="blog-badge-3">AI</div>
+                                   </div>
+                               </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Top right  -->
+                <div class="col-xl-6 col-sm-12 col-md-12 blog-top-right "> <!-- md-mb-5 -->
+                    <div class="row">
+                        <div class="col-sm-12 col-xl-6 col-md-5">
+                            <a href="">
+                                <img class="image" src="https://miro.medium.com/v2/resize:fit:1400/1*fqrIN9ssaU7qDcLr3KS6Xg.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-7 col-xl-6"><div class="blog-content">
+                            <h3>• 1 Jan 2023</h3>
+                            <div class="heading-and-arrow">
+                                <h2>Grid system for better Design User Interface</h2>
+                                <a id="hidden-arrow" href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g class="arrow-up-right">
+                                                    <path id="Icon" d="M7 17L17 7M17 7H7M17 7V17" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </g>
+                                        </svg>
+                                </a>
+                            </div>
+                            <p>How do you create colleagues and impress your managers?</p>
+                            <div class="blog-badges">
+                                <div class="blog-badge-1">Design</div>
+                                <div class="blog-badge-2">Research</div>
+                            </div>
+                        </div></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5 col-xl-6">
+                           <a href="">
+                            <img class="image" src="rayban.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-7 col-xl-6">
+                            <div class="blog-content">
+                                <h3>• 1 Jan 2023</h3>
+        
+                                <div class="heading-and-arrow">
+                                    <h2>The Rise of Ray-Ban Meta Glasses </h2>
+                                    <a id="hidden-arrow" href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id=class="arrow-up-right">
+                                                        <path id="Icon" d="M7 17L17 7M17 7H7M17 7V17" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </g>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <p>How do you create cimpress your managers?</p>
+                                <div class="blog-badges">
+                                    <div class="blog-badge-1">Design</div>
+                                    <div class="blog-badge-2">Research</div>
+                                    <div class="blog-badge-3">AI</div>
+                                </div>
+                                </div>
+                        </div>
+
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+
+        </section>
+        
+
+        <!-- Bottom  -->
+        <section class="blog-section blog-bottom">
+            <div class="row">
+                
+                <div class="col-xl-6">
+                    <a href="">
+                        <img class="image img-2" src="ios18.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-xl-6">
+                    
+                        <div class="blog-content">   
+                        <h3>• 1 Jan 2023</h3>
+                            <div class="heading-and-arrow">
+                                <h2>iOS 18: A New Era in User Experience Through Apple Intelligence</h2>
+                                <a  href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g class="arrow-up-right">
+                                                    <path id="Icon" d="M7 17L17 7M17 7H7M17 7V17" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </g>
+                                        </svg>
+                                </a>
+                            </div>
+                            <p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements. Grid systems are used to create a consistent look and feel across a website more .</p>
+                            <div class="blog-badges">
+                                <div class="blog-badge-1">Design</div>
+                                <div class="blog-badge-2">Research</div>
+                                <div class="blog-badge-3">AI</div>
+                            </div>    
+                        </div>
+                        
+                </div>
+            </div>
+        </section>
+        
+        
+        </div>
+
+    </div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/257e1e7ee4.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
